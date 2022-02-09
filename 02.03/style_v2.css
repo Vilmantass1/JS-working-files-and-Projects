@@ -1,0 +1,51 @@
+.Main {
+    height: 500px;
+    width: 400px;
+    background-color: cadetblue;
+    border-radius: 25px;
+}
+
+.Box {
+    height: 80px;
+    width: 400px;
+    background-color: cornflowerblue;
+    border-radius: 25px;
+}
+
+.Box h1 {
+    text-align: center;
+}
+
+.Username {
+    margin-top: 100px;
+    text-align: right;
+    padding-right: 100px;
+}
+
+.password {
+    margin-top: 5px;
+    text-align: right;
+    padding-right: 100px;
+}
+
+.Login {
+    margin-left: 150px;
+    margin-top: 35px;
+    height: 35px;
+    width: 100px;
+}
+
+.Login:hover {
+    background-color: rgb(55, 174, 179);
+}
+
+.Login:active {
+    background-color: rgb(46, 167, 172);
+    box-shadow: 0 5px rgb(216, 16, 16);
+    transform: translateY(4px);
+}
+
+.container {
+    margin-left: 150px;
+    color: white;
+}

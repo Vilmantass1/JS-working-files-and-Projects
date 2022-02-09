@@ -1,0 +1,33 @@
+.flexBox {
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+    width: 800px;
+    border: 2px solid black;
+}
+
+.flexBox>div {
+    display: flex;
+}
+
+.flexBox>div>div {
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+}
+
+.flexBox>div:nth-child(1)>div {
+    background-color: yellow;
+}
+
+.flexBox>div:nth-child(2)>div {
+    background-color: green;
+}
+
+.flexBox>div:nth-child(3)>div {
+    background-color: red;
+}
+
+.flexBox>div>div:hover {
+    background-color: black;
+}

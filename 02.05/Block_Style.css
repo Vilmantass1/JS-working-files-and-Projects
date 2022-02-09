@@ -1,0 +1,122 @@
+.Main {
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 800px;
+    border: 2px solid black;
+    justify-content: space-evenly;
+}
+
+.Row {
+    display: flex;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+.One {
+    display: flex;
+    height: 50px;
+    flex-grow: calc(1);
+    border: 2px solid black;
+}
+
+.Two {
+    display: flex;
+    height: 50px;
+    flex-grow: calc(1);
+    border: 2px solid black;
+}
+
+.three {
+    display: flex;
+    height: 50px;
+    flex-grow: calc(3);
+    border: 2px solid black;
+}
+
+.Row:last-child {
+    height: 500px;
+}
+
+.Four {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.Five {
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+}
+
+.Five>div:first-child {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.Five>div:nth-child(2) {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.Five>div:nth-child(3) {
+    gap: 50px;
+    display: flex;
+    flex-grow: 3;
+}
+
+.Five1 {
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    flex-grow: 2;
+}
+
+.Five2 {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.Five1_2 {
+    gap: 50px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.six {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.seven {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.Five1_2>div:first-child {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.Five1_2>div:nth-child(2) {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
+
+.Five1_2>div:nth-child(3) {
+    display: flex;
+    border: 2px solid black;
+    flex-grow: 1;
+}
