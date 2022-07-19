@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //2 uzduotis - Basic Variable Assignment
+        // var b = "Edabit"
+        // var result = " ";
+
+        // function nameString(name) {
+        //     result = b + name
+        //     return result;
+        // };
+
+        // console.log(nameString("  +"));
+
+        // 3 uzduotis - Less Than 100?
+
+        // function lessThan100(a, b) {
+
+        //     if (a + b < 100) {
+        //         return true
+        //     } else {
+        //         return false
+        //     }
+
+        // }
+
+        // console.log(lessThan100(5, 100));
+
+        // 4 uzduotis Add up the Numbers from a Single Number
+        // var a = 0;
+
+        // function addUp(input) {
+        //     //   for (var i = 0; i <= input; i++) {
+        //     a += input * (input + 1) / 2
+
+        // }
+        // //}
+        // addUp(13);
+
+        // console.log(a)
+
+        // 5 uzduotis - Convert a Number to Base-2
+
+        var x = "";
+        var count = 0;
+        var binaryArray = [];
+
+        function binary(decimal) {
+            if (decimal == 0) {
+                return '0';
+            } else {
+
+                while (decimal > 0) {
+                    //decimal--
+                    if (decimal % 2 == 1) {
+                        x += "1";
+                    } else {
+                        x += "0";
+                    }
+                    decimal = Math.floor(decimal / 2);
+                }
+                x = x.split("").reverse().join("");
+            }
+        };
+
+        binary(2);
+
+        console.log(x)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

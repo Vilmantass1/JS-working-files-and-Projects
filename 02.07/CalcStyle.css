@@ -13,7 +13,7 @@
     margin: auto;
 }
 
-.display {
+#display {
     pointer-events: none;
     background-color: black !important;
     grid-row: span 2;

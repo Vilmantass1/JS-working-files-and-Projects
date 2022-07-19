@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var students = [{
+        //     name: "Mindaugas",
+        //     grades: [10, 5, 7]
+        // }, {
+        //     name: "Jonas",
+        //     grades: [10, 5, 7]
+        // }, {
+        //     name: "Ana",
+        //     grades: [10, 5, 7, 10]
+        // }, ];
+
+        // // Turime masyvą su mokinių informacija, kiekvienas objektas: name ir grades []. Suformuokite naują mokinių masyvą kur kiekvienas objektas turės informaciją: name ir avgGrade.
+
+        // // function avgGrade(GivenArr) {
+
+        // //     var resultForStudentsWithAvg = [];
+
+        // //     GivenArr.forEach(person => {
+        // //         var GradesSum = person.grades.reduce((previous, current) => previous + current);
+        // //         var averageGrade = GradesSum / person.grades.length;
+        // //         var student = {
+        // //             name: person.name,
+        // //             GradeaAvg: averageGrade.toFixed(2)
+        // //         }
+
+        // //         resultForStudentsWithAvg.push(student);
+        // //     });
+        // //     return resultForStudentsWithAvg;
+        // // };
+
+
+        // // console.log(avgGrade(students));
+
+
+        // let students1 = [{
+        //     name: "Mindaugas",
+        //     subject_grades: [{
+        //         subject_name: "Lietuvių",
+        //         grades: [10, 7, 8]
+        //     }, {
+        //         subject_name: "Matematika",
+        //         grades: [10, 7, 8]
+        //     }, ]
+        // }, {
+        //     name: "Jonas",
+        //     subject_grades: [{
+        //         subject_name: "Lietuvių",
+        //         grades: [5, 7, 8]
+        //     }, {
+        //         subject_name: "Matematika",
+        //         grades: [8, 7, 8]
+        //     }, ]
+        // }, ];
+
+        // function AvgOfAllsubjects(GivenArr) {
+
+        //     var resultAvgOfAllsubjects = [];
+        //     GivenArr.forEach(person => {
+
+        //         person.subject_grades.forEach(subjectGrades => {
+        //             var GradesSum = subjectGrades.grades.reduce((previous, current) => previous + current);
+        //             var averageGrade = GradesSum / subjectGrades.grades.length;
+        //             var student = {
+        //                 name: person.name,
+        //                 subject_grades: person.subject_grades,
+        //                 GradeaAvg: averageGrade.toFixed(2)
+        //             }
+        //             resultAvgOfAllsubjects.push(student);
+        //         })
+        //     });
+        //     return resultAvgOfAllsubjects
+        // };
+
+        // console.log(AvgOfAllsubjects(students1));
+
+
+        // var arrat = [2, 2, 4, 5, 89, 81, 5, 84, 984, 514, 21, 24, 842, 5814, 5, 54, 854, 584, 54, 5, 46, 4, 85];
+
+        // //Tradicine        
+        // function Tradicine(array) {
+        //     var resultLaikinas = 0;
+        //     var result = 0;
+        //     var j = 1;
+        //     for (var i = 0; i < array.length; i++) {
+        //         resultLaikinas += array[i] + array[j];
+        //         j++;
+        //         result += resultLaikinas + array[j];
+        //     }
+        //     //kazka daro
+        //     return result
+        // }
+        // console.log(Tradicine(arrat));
+        // console.log(Tradicine(result));
+
+        //   array.reduce((x, y) => x + y) / array.length
+
+        //  parasyti funkcija i kuria kaip paremtras ateina skaicius ir funkcija grazina to skaiciaus faktoriala, funkcija turetu kviesti pati save, naudoti rekursijos principa, apskaiciavimui.
+
+
+        // function factorial(n) {
+        //     var result = 0;
+        //     if (n == 0 || n == 1)
+        //         return 1;
+        //     if (n > 1) {
+        //         return result = factorial(n - 1) * n;
+        //     }
+        // }
+
+        // console.log(factorial(6));
+
+
+        // var result = 0
+
+        // myFunction = (n) => n == 0 || n == 1 ? result = 1 : result = myFunction(n - 1) * n;
+
+
+        // console.log(myFunction(6));
+
+        ///
+        // 2. parasyti funkcija kuri apskaiciuotu N-taji fibionachi sekos skaiciu
+
+
+        // 1-as: 1
+
+        // 2-tras: 1
+
+        // 3-cias: 2
+
+        // 4-tas: 3
+
+        // 5-tas: 5
+
+        // 6-tas: 8
+
+        // 7-tas: 13
+
+        // ir t.t.
+
+
+
+        // tai jei i funkcija paduosi 6, funkcija returnint turetu 8
+
+
+        // function FibionachiFinder(nth) {
+        //     if (nth <= 1) {
+        //         return nth;
+        //     }
+        //     return FibionachiFinder(nth - 1) + FibionachiFinder(nth - 2);
+        // }
+
+        // console.log(FibionachiFinder(6));
+
+        //supaprastinti naudojant funkcijas
+
+        // var students = [{
+        //     name: "Mindaugas",
+        //     grades: [10, 5, 7]
+        // }, {
+        //     name: "Jonas",
+        //     grades: [10, 5, 7]
+        // }, {
+        //     name: "Ana",
+        //     grades: [10, 5, 7, 10]
+        // }, ];
+        // var studentsWithAvg = [];
+        // for (var i = 0; i < students.length; i++) {
+        //     let sum = 0;
+        //     for (let j = 0; j < students[i].grades.length; j++) {
+        //         sum = sum + students[i].grades[j];
+        //     }
+        //     let avg = sum / students[i].grades.length;
+        //     studentsWithAvg.push({
+        //         "name": students[i].name,
+        //         "avg": avg
+        //     });
+        // }
+        // console.log(studentsWithAvg);
+
+        //3.1 naudojant reduce(x,y =>)
+        // function StudentsWithAvarageMy(students) {
+        //     var studentsWithAvg = [];
+        //     for (var i = 0; i < students.length; i++) {
+        //         var GradesSum = students[i].grades.reduce((previous, current) => previous + current);
+        //         var avg = GradesSum / students[i].grades.length;
+        //         studentsWithAvg.push({
+        //             "name": students[i].name,
+        //             "avg": avg
+        //         });
+        //     }
+        //     return studentsWithAvg;
+        // };
+        // console.log(StudentsWithAvarageMy(students));
+
+
+        //3.2 naudojant savo funkcija
+
+        // function StudentsWithAvarage(students) {
+        //     var studentsWithAvg = [];
+        //     for (var i = 0; i < students.length; i++) {
+        //         studentsWithAvg.push({
+        //             "name": students[i].name,
+        //             "avg": GetStudenGradeAvg(students[1])
+        //         });
+        //     }
+        //     return studentsWithAvg;
+        // }
+        // console.log(StudentsWithAvarage(students));
+
+        //
+
+        // Car = {
+        //     marke: 'ford',
+        //     model: 'siera',
+        //     engine: '1.8',
+        //     spalva: 'zalia',
+        //     basePrice: 10000
+        // };
+
+        // var engine = {
+        //     horsePower: 200,
+        //     displacement: 66
+        // };
+
+        // function getprice() {
+
+        // };
+
+        class Car {
+            constructor(marke, model, engine, spalva, basePrice) {
+                this.marke = marke;
+                this.model = model;
+                this.engine = engine;
+                this.spalva = spalva;
+                this.basePrice = basePrice;
+            }
+
+
+            getprice() {
+                return this.basePrice * this.engine.horsePower + this.basePrice / 2 * this.engine.displacement;
+            }
+
+            getkw() {
+                return this.engine.getkw()
+            }
+        };
+
+
+        class Engine {
+            constructor(horsePower, displacement) {
+                this.horsePower = horsePower;
+                this.displacement = displacement;
+            }
+            getkw() {
+                return this.horsePower * 0.745;
+            }
+        };
+
+        var ford = new Car('Ford', 'Siera', new Engine(200, 1.8), 'green', 10000);
+
+
+        console.log(ford);
+        console.log(ford.getprice());
+        console.log(ford.getkw());
+
+        // 2 uzduotis
+        var numArrayOne = [1, 5, 9, 8, 7];
+        var numArrayTwo = [4, 8, 7, 9, 6, 3, 2, 1, 4];
+
+
+        function mergeAndSortArrays(arr1, arr2) {
+            var result = [];
+            for (var i = 0; i < arr1.length; i++) {
+                result.push(arr1[i]);
+            }
+            for (var j = 0; j < arr2.length; j++) {
+                result.push(arr2[j]);
+            }
+            result.sort();
+
+
+            return result;
+        }
+
+        console.log(mergeAndSortArrays(numArrayOne, numArrayTwo));
+
+
+        //Array skaiciavimai su map,reduce,filter
+        //4.1 Naudojant Map funkcija is kiekviena masyvo elementa padauginti is jo indekso ir prie sumos prideti indeksa
+        // t.y. atsakymas
+
+        // [45*0+1, 4*1+1, 9*2+2, ir t.t.]
+        //         4.2 Naudojant array.reduce funkcija, apskaiciuoti, arrejaus visu elementu suma
+
+        // 4.2 (pasunkinimas) apskaiciuoti vidurki
+
+
+        // 4.3. naudojant array.filter funkcija atfiltruoti arreju paliekant tik skaicius kurie yra lyginiai.
+
+        // parametrai kuriuos funkcijos gauna is array:
+
+        // array.MAP (value, index, array)
+
+        // array.REDUCE  (total, value, index, array)
+
+        // array.Filter (value, index, array)- filter funkcija grazina arba true arba false ir reiksmes kurios atitinka true arba false salyga
+
+
+        const numbers1 = [45, 4, 9, 16, 25];
+
+
+        //4.1
+        function ForMap(x, y) {
+            return x * y + y
+        }
+        console.log(numbers1.map(ForMap));
+        console.log(numbers1.map((x, y) => x * y + y));
+
+        //4.2.1
+        function ForReduce(x, y) {
+            return x + y
+        }
+        console.log(numbers1.reduce(ForReduce));
+        console.log(numbers1.reduce((x, y) => x + y));
+
+        //4.2.2 vidurkis
+
+        function ForReduceAvg(x, y) {
+            return x + y
+        }
+        console.log(numbers1.reduce(ForReduceAvg));
+        //  console.log(numbers1.reduce((x, y) => x + y));
+
+        //4.3
+        function ForFilter(x, y) {
+            return x % 2 == 0
+        }
+        console.log(numbers1.filter(ForFilter));
+
+        console.log(numbers1.filter((x) => x % 2 == 0));
+
+
+        //5.
+
+        function CustomJoin(array, separator) {
+            var result = '';
+            for (var i = 0; i < array.length; i++) {
+                //  result = +array[i] + ' ' + separator + ' ';
+
+                result = array[i]
+            }
+            return result
+
+        }
+
+        console.log(CustomJoin(numbers1, 'ir'))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+    <script>
+        var nuo = new Date(1993, 10, 20);
+        var options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+        var iki = new Date();
+
+        function whichdate(nuo) {
+
+            nuo.toLocaleDateString('lt-LT', options);
+
+        };
+
+        console.log(nuo.toLocaleDateString('lt-LT', options));
+
+        ///
+
+
+
+        var rezultatas = 0;
+
+        function DaysToLive(BirthDate) {
+            //var BirthDate = Date.UTC(1993, 10, 20);
+            var Now = Date.UTC(2022, 02, 28);
+            var DayMilliseconds = 86400000;
+
+            rezultatas = (Now - BirthDate) / DayMilliseconds
+        }
+        DaysToLive(Date.UTC(1993, 10, 20));
+        console.log(rezultatas);
+
+
+
+
+        ///
+
+        function kiekDienuNugyvenauEasy(GimimoDiena) {
+            var siandien = new Date();
+            var TimeDifferenceInMiliseconds =
+                Date.UTC(siandien.getFullYear(), siandien.getMonth() + 1, siandien.getDate()) -
+                Date.UTC(GimimoDiena.getFullYear(), GimimoDiena.getMonth() + 1, GimimoDiena.getDate());
+            //                      MS     S    M   H 
+            var milisecondsInDay = 1000 * 60 * 60 * 24;
+            return TimeDifferenceInMiliseconds / milisecondsInDay;
+        }
+
+        ///
+
+        function nugyventosDienos(BirthDay) {
+
+            var CurrentDay = new Date();
+            console.log(CurrentDay);
+            CurrentDay.getFullYear();
+
+            console.log(CurrentDay);
+
+            // for (var i = 0; i < CurrentDay; i++) {
+            //return new Date(year, month, 0).getDate();
+            //  }
+
+
+        };
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

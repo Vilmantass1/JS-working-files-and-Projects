@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var likes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+        var disLikes = ["Saab", "volvo", "BWM", "Audi", "Hyunday", "Lada", "Peugeot", "Reneu", "Lotus", "bike"];
+        var tarpas = " ";
+        var rezultatas = [];
+        var vieta = 0; // nusako vieta array
+        var MainArray = []; //4 uzduotis
+        var likesArray = []; // 4 uzduotis
+        var disLikesArray = []; // 4 uzduotis
+
+
+        //Uzduotis 1
+        // likes.forEach(element =>
+        //     disLikes.forEach(element2 => console.log(element + tarpas + element2)))
+
+        //Uzduotis 2       
+
+        // likes.forEach(element => {
+
+        //     disLikes.forEach(element2 => {
+
+        //         rezultatas[vieta] = element + tarpas + element2;
+        //         vieta += 1; //vis kita vieta array i kuria idedam
+        //     });
+        // });
+        // console.log(rezultatas);
+
+
+        //Uzduotis 3
+
+        // for (var i = 0; i < likes.length; i++) {
+        //     for (var x = 0; x < likes.length; x++) {
+        //         if (i != x) {
+        //             console.log(likes[i] + tarpas + likes[x]);
+        //             console.log(disLikes[i] + tarpas + disLikes[x]);
+
+        //         }
+        //         console.log(likes[i] + tarpas + disLikes[x]);
+        //         console.log(disLikes[i] + tarpas + likes[x]);
+        //     }
+        //     
+        // }
+
+        //  console.log(MainArray);
+        //      MainArray.push(likes[i] + disLikes[x]);
+
+        //Uzduotis 4
+
+        // for (var i = 0; i < likes.length; i++) { // kintamasis, ciklas suksis kol, ciklui prasisikus reiksme
+        //     for (var x = 0; x < likes.length; x++) {
+        //         if (i != x) {
+        //             MainArray.push(likes[i] + tarpas + likes[x]);
+        //             MainArray.push(disLikes[i] + tarpas + disLikes[x]);
+
+        //         }
+        //         MainArray.push(likes[i] + tarpas + disLikes[x]);
+        //         MainArray.push(disLikes[i] + tarpas + likes[x]);
+        //     }
+        // }
+
+        // console.log(MainArray);
+
+        var flag = true;
+        var word = "racecar"
+
+        for (var i = 0; i < word.length / 2; i++) {
+            if (word.charAt(i) != word.charAt(word.length - i - 1)) { //lygina raides is abieju pusiu ar sutampa
+                flag = false;
+                break;
+            }
+        }
+        if (flag) {
+            console.log("Given string is Palindron")
+        } else {
+            console.log("Given string is not Palindron")
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

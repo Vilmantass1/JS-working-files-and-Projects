@@ -4,32 +4,190 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="CalcStyle.css">
+    <script>
+        var firstChoice = "";
+        var IsPlusClicked = false;
+        var SecondChoice = "";
+        var IsMinusClicked = false;
+        var IsDivisionClicked = false;
+        var IsMultiplicationClicked = false;
+        var IsResetClicked = false;
+        var IsEqualClicked = false;
+        var IsDotClicked = false;
+        var IsPercentageClicked = false;
+        var IsplusMinusClicked = false;
 
+        function skaiciusClicked(choice) {
+            if (!IsMultiplicationClicked & !IsDivisionClicked & !IsPlusClicked & !IsMinusClicked & !IsPercentageClicked) {
+                if (IsEqualClicked) { //Po to kai lygu paspaudziu, kad toliau galima butu test veiksma
+                    firstChoice = choice;
+                    IsEqualClicked = false;
+                } else {
+                    firstChoice += choice.toString();
+                }
+
+                document.getElementById("display").innerHTML = firstChoice;
+            } else if (IsMultiplicationClicked || IsDivisionClicked || IsPlusClicked || IsMinusClicked || IsPercentageClicked) {
+                SecondChoice += choice;
+                document.getElementById("display").innerHTML = SecondChoice;
+                IsDotClicked = true;
+                IsplusMinusClicked = true
+
+            }
+
+
+        }
+
+        function plusMinusClicked() {
+            if (firstChoice != "" || firstChoice != "0" && IsplusMinusClicked) {
+                if (firstChoice > "0") {
+                    firstChoice = "-" + firstChoice
+                    document.getElementById("display").innerHTML = firstChoice;
+                    reset;
+                    IsplusMinusClicked = true;
+                }
+
+            } else if (firstChoice != "" || firstChoice != "0" && IsplusMinusClicked) {
+                if (firstChoice < "0") {
+                    firstChoice = "-" + firstChoice
+                    document.getElementById("display").innerHTML = firstChoice;
+                    reset;
+                    IsplusMinusClicked = true;
+                }
+            }
+
+            if (SecondChoice != "" || SecondChoice != "0" && IsplusMinusClicked) {
+                if (SecondChoice > "0") {
+                    SecondChoice = "-" + SecondChoice
+                    document.getElementById("display").innerHTML = SecondChoice;
+                    reset;
+                    IsplusMinusClicked = true;
+                }
+
+            } else if (SecondChoice != "" || SecondChoice != "0" && IsplusMinusClicked) {
+                if (SecondChoice < "0") {
+                    SecondChoice = "-" + SecondChoice
+                    document.getElementById("display").innerHTML = SecondChoice;
+                    reset;
+                    IsplusMinusClicked = true;
+                }
+            }
+
+        }
+
+        function percentageClicked() {
+            if (firstChoice != "" || SecondChoice != "" && IsPercentageClicked) {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) / 100;
+                reset();
+            } else document.getElementById("display").innerHTML = parseFloat(SecondChoice) / 100;
+            reset();
+
+            IsPercentageClicked = true;
+        }
+
+        function DotSignClicked() {
+            if (!IsDotClicked) {
+                if (!IsMultiplicationClicked & !IsDivisionClicked & !IsPlusClicked & !IsMinusClicked) {
+                    firstChoice += ".";
+                }
+            } else if (IsMultiplicationClicked || IsDivisionClicked || IsPlusClicked || IsMinusClicked) {
+                SecondChoice += ".";
+
+            }
+
+            IsDotClicked = true;
+            document.getElementById("display").innerHTML = choice + ".";
+        }
+
+        function plusSingnClicked() {
+            IsPlusClicked = true;
+            IsDotClicked = false;
+            IsplusMinusClicked = false;
+            document.getElementById("display").innerHTML = "+";
+        }
+
+        function minusSingnClicked() {
+            IsMinusClicked = true;
+            IsDotClicked = false;
+            document.getElementById("display").innerHTML = "-";
+        }
+
+        function divisionSingnClicked() {
+            IsDivisionClicked = true;
+            IsDotClicked = false;
+            document.getElementById("display").innerHTML = "/";
+        }
+
+        function multiplicationSignClicked() {
+            IsMultiplicationClicked = true;
+            IsDotClicked = false;
+            document.getElementById("display").innerHTML = "*";
+        }
+
+        function resetClicked() {
+            IsResetClicked = true;
+            reset();
+            document.getElementById("display").innerHTML = "0";
+        }
+
+        function equalSignClicked() {
+            if (IsPlusClicked && firstChoice != "" && SecondChoice != "") {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) + parseFloat(SecondChoice);
+                reset();
+            } else if (IsMinusClicked && firstChoice != "" && SecondChoice != "") {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) - parseFloat(SecondChoice);
+                reset();
+            } else if (IsDivisionClicked && firstChoice != "" && SecondChoice != "") {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) / parseFloat(SecondChoice);
+                reset();
+            } else if (IsMultiplicationClicked && firstChoice != "" && SecondChoice != "") {
+                document.getElementById("display").innerHTML = parseFloat(firstChoice) * parseFloat(SecondChoice);
+                reset();
+            }
+
+            firstChoice = document.getElementById("display").innerHTML;
+            IsEqualClicked = true;
+        }
+
+
+        function reset() { //Funkcija, kad nunulint
+            firstChoice = "";
+            IsPlusClicked = false;
+            SecondChoice = "";
+            IsMinusClicked = false;
+            IsDivisionClicked = false;
+            IsMultiplicationClicked = false;
+            IsResetClicked = false;
+            IsDotClicked = false;
+            IsPercentageClicked = false;
+            IsplusMinusClicked = false;
+        }
+    </script>
 </head>
 
 <body>
 
     <div class="Main">
-        <div class="display">1234</div>
-        <div>c</div>
-        <div>+/-</div>
-        <div>%</div>
-        <div class="function">/</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div class="function">x</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div class="function">-</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div class="function">+</div>
-        <div class="null">0</div>
-        <div>,</div>
-        <div class="function">=</div>
+        <div id="display"></div>
+        <div onclick="resetClicked()">AC</div>
+        <div onclick="plusMinusClicked()">+/-</div>
+        <div onclick="percentageClicked()">%</div>
+        <div onclick="divisionSingnClicked()" class="function">/</div>
+        <div onclick="skaiciusClicked(7)">7</div>
+        <div onclick="skaiciusClicked(8)">8</div>
+        <div onclick="skaiciusClicked(9)">9</div>
+        <div onclick="multiplicationSignClicked()" class="function">x</div>
+        <div onclick="skaiciusClicked(4)">4</div>
+        <div onclick="skaiciusClicked(5)">5</div>
+        <div onclick="skaiciusClicked(6)">6</div>
+        <div onclick="minusSingnClicked()" class="function">-</div>
+        <div onclick="skaiciusClicked(1)">1</div>
+        <div onclick="skaiciusClicked(2)">2</div>
+        <div onclick="skaiciusClicked(3)">3</div>
+        <div onclick="plusSingnClicked()" class="function">+</div>
+        <div onclick="skaiciusClicked(0)" class="null">0</div>
+        <div onclick="DotSignClicked()">,</div>
+        <div onclick="equalSignClicked()" class="function">=</div>
     </div>
 </body>
 

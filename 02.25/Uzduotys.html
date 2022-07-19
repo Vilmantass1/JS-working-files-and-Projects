@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        if (true) // kazkoks skaiciavimas nusakantis ar true ar false
+        { //Bet kas ka norim atlikti
+
+
+            //Uzduotis https://edabit.com/challenge/AWEX2eYNWGEsig4Fc
+
+        }
+
+        function chunk(arr, size) {
+            if (arr.length < size) {
+                return [arr];
+            }
+
+            var count = 0; // kad sekti kur esam ir kiek suksis
+            var answerArray = []; // pagrindinis array
+            var tempArray = []; // array elementai
+            var answerArrayCount = 0;
+
+
+            // while(count< arr.size){
+            //     count++
+            // }
+
+            arr.forEach(arraynumber => {
+                if (count == size) {
+                    count = 0;
+                    answerArray[answerArrayCount] = tempArray;
+                    tempArray = []; //nunulinu array
+                    answerArrayCount++
+
+                }
+
+                tempArray[count] = arraynumber;
+                count++
+
+            });
+
+            if (tempArray.length > 0) {
+                answerArray[answerArrayCount] = tempArray;
+            }
+            return answerArray;
+        }
+
+        chunk([1, 2, 3, 4], 2)
+
+        // function greeting(name) {
+        //     if (name == "Mubashir") {
+        //         return "Hello, my Love!";
+        //     } else {
+        //         return "Hello, " + name + "!";
+        //     }
+        // };
+
+        // console.log(greeting("Mubashir"));
+
+        // function generation(x, y) {
+        //     if (x == 1 & y == "F") {
+        //         return "daughter"
+        //     }
+        //     if (x == 1 & y == "M") {
+        //         return "Son"
+        //     }
+        //     if (x == -1 & y == "F") {
+        //         return "mother"
+        //     }
+        //     if (x == -1 & y == "M") {
+        //         return "father"
+        //     }
+
+        // };
+        // console.log(generation(-1, "M"))
+
+        // function count(number) {
+
+        //     if (number >= 0) {
+
+        //         if (number >= 1) {
+        //             if (number >= 2) {
+        //                 if (number >= 3) {
+        //                     if (number >= 4) {
+        //                         if (number >= 5) {
+
+        //                         }
+        //                         return "penki";
+
+        //                     }
+        //                     return "keturi";
+        //                 }
+        //                 return "trys";
+
+
+        //             }
+        //             return "du";
+
+        //         }
+        //         return "vienas";
+
+        //     }
+        //     return "Nulis";
+        // };
+
+        // console.log(count(0))
+        // console.log(count(1))
+        // console.log(count(2))
+        // console.log(count(3))
+        // console.log(count(4))
+        // console.log(count(5))
+
+
+        // function skaiciavimas(num) {
+        //     switch (num) {
+        //         case 0:
+        //             console.log("Nulis");
+        //             break;
+        //         case 1:
+        //             console.log("vienas");
+        //             break;
+        //         case 2:
+        //             console.log("du");
+        //             break;
+        //         case 3:
+        //             console.log("Trys");
+        //             break;
+
+        //         default:
+        //             console.log("NA");
+        //     }
+
+        // if (num == 0) {
+        //     console.log("Nulis")
+        // } else if (num == 1) {
+        //     console.log("vienas")
+
+        // } else if (num == 2) {
+        //     console.log("Du")
+
+        // } else if (num == 3) {
+        //     console.log("trys")
+
+        // } else if (num == 4) {
+        //     console.log("keturi")
+
+        // } else if (num == 5) {
+        //     console.log("penki")
+
+        // } else if (num == 6) {
+        //     console.log("sesi")
+
+        // } else if (num == 7) {
+        //     console.log("septyni")
+
+        // } else if (num == 8) {
+        //     console.log("astuoni")
+
+        // } else if (num == 9) {
+        //     console.log("devyni")
+
+        // }
+
+        // }
+
+        // skaiciavimas(2);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Find the Smallest and Biggest Numbers
+        var MinMaxArr = [5, 2, 8, 9, 1];
+        //var min = '';
+        //var max = '';
+
+        MinMaxArr.sort(function ab(a, b) {
+            return a - b
+        });
+
+        console.log(MinMaxArr[0] + " " + 'Min value')
+        console.log(MinMaxArr[MinMaxArr.length - 1] + " " + "Max value")
+
+
+        //Find the Amount of Potatoes
+
+        var a = "";
+        var count = 0;
+
+        function potatoes(functionValue) {
+            a = functionValue.match(/potato/g);
+            console.log(a.length);
+
+        };
+
+        //for (functionValue.match(/potato/g); functionValue = true; count++) {
+        //  functionValue = true;
+        //return count;
+        //};
+
+        //};
+        potatoes("potato apple potato aaaaaaaaaaa and potato")
+            // console.log(functionValue);
+
+
+        //Count Instances of a Character in a String
+
+        var firstChar = '';
+        var word = '';
+        var result = '';
+
+        function countChar(a, b) {
+            firstChar = a.charAt(0);
+            //console.log(firstChar)
+            word = b;
+            for (var i = 0; i < word.length; i++) {
+                if (firstChar == word.charAt(i)) {
+                    result++
+                }
+            }
+        };
+
+        countChar("b", "big fat bubble");
+        console.log(result)
+
+
+        //
+    </script>
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

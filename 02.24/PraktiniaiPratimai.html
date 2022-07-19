@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var MyName = "Mano vardas {x}, as esu profesionalus {atletas!}";
+        var nameStart = "";
+        var nameEnd = "";
+        var profesionStart = "";
+        var profesionEnd = "";
+        var ReturnName = "";
+        var ReturnProfesion = "";
+
+        nameStart = MyName.indexOf("{") + 1;
+        nameEnd = MyName.indexOf("}");
+        profesionStart = MyName.lastIndexOf("{") + 1;
+        profesionEnd = MyName.lastIndexOf("}");
+
+        ReturnName = MyName.slice(nameStart, nameEnd);
+        ReturnProfesion = MyName.slice(profesionStart, profesionEnd);
+
+        // names = str.slice(13, 1);
+        // profesion = str.slice(36, 8);
+
+        console.log(ReturnName + " " + ReturnProfesion);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

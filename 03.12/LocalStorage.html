@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Pirma uzduotis, paklaust vartotojo vardo jei local storage nera jo,
+        //jei local storage, jau yra vartotojo, vardas, pasveikint ji sugryzus
+        // https://www.w3schools.com/jsref/prop_win_localstorage.asp
+
+        //var userName = prompt('Please enter your name');
+
+        // if (localStorage.getItem('UserName')) { //null = false
+        //     console.log(`Sveiki sugrize ${localStorage.getItem('UserName')}`)
+        // } else {
+        //     var userName = prompt('Please enter your name');
+        //     localStorage.setItem('UserName', userName);
+        // }
+        // //localStorage.clear();
+        // var myObject = {
+
+        //     name: "TestObject",
+
+        //     type: "Object (reference type)",
+
+        //     someOtherObjct: {
+
+        //         name: "diferent object",
+
+        //         difParameter: "something",
+
+        //         otherParameter: "SomethingSomething"
+        //     }
+        // };
+
+        // var myParseObject = JSON.parse(localStorage.getItem('myOvject'));
+
+        // document.cookie = "username=John Smith; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/";
+
+        //2. uzduotis, surinkti 10 faktu apie kates is API, su GET metodu ir sudeti juos i console
+
+        var request = new Request('https://catfact.ninja/facts?limit=10', {
+
+            method: 'GET',
+
+            headers: new Headers({
+
+                'Content-Type': 'application/json'
+            })
+        });
+
+        fetch(request)
+
+        .then(response => {
+
+                console.log(response);
+
+                return response.json();
+
+            }) //Responco objecktas ir ka su juo darome
+
+        .then(json => catFact = json) // kai is receponco gauname .Json() priskiriami ji savo kintamajui
+
+        .catch(error => console.error(error)) // Catch isskivies esant errorui
+
+        .finally(() => { //finally issikvies paciam gale po  visko
+
+            for (var i = 0; i < 10; i++) {
+                console.log(catFact.data[i].fact);
+            }
+            // console.log(catFact.data);
+            // console.log(catFact.data[0].fact);
+            // console.log(catFact.data[1]);
+            // console.log(catFact.data[2]);
+            // console.log(catFact.data[3]);
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // var LogIn = false;
+        // var Pass = false;
+
+        // while (!LogIn) {
+        //     var Prisijungimas = prompt('Enter your name');
+
+        //     if (Prisijungimas != 'Vilmantas') {
+        //         alert('neteisingas prisijungimas')
+        //     } else {
+        //         alert('teisingai')
+        //         LogIn = true;
+        //     }
+
+        // };
+
+        // while (!Pass) {
+        //     var Slaptazodis = prompt('Enter your pass');
+
+        //     if (Slaptazodis != '12345') {
+        //         alert('neteisingas slaptazodis')
+        //     } else {
+        //         alert('teisingai, sveikinam prisijungus')
+        //         Pass = true;
+        //     }
+
+        // };
+
+        var nameList = ['Nina', 'Ozzie', 'Queenie', 'Pokey', 'Cubs', 'Wags', 'Ellie', 'Nibbles', 'Paris', 'Scarlett', 'Harpo', 'Chyna',
+            'Lexi', 'Kibbles', 'Susie', 'Rex', 'Blackjack', 'Snoop', 'Pumpkin', 'Ryder', 'Kirby', 'Sassy', 'Niki', 'Eddie', 'Latte',
+            'Buffy', 'Brittany', 'Buddie', 'Rambo', 'Scooby-doo', 'Tango', 'Snuffles', 'Felix', 'Rosy', 'BJ', 'Zippy', 'Lynx', 'Bongo',
+            'Buzzy', 'Chrissy', 'Justice', 'Rebel', 'Billy', 'Audi', 'Ranger', 'Puddles', 'Susie Q', 'Gator', 'Persy', 'Clancy', 'Madison',
+            'Waldo', 'Jingles', 'Baron', 'Raison', 'Jolly', 'Jester', 'Cherokee', 'Sammy', 'Zoie', 'Ruger', 'Jenna', 'Jolie', 'Speed',
+            'Kane', 'Sunny', 'Isabelle', 'Jess', 'Dandy', 'Bug', 'Nona', 'Porter', 'Trooper', 'Darwin', 'Babbles', 'Boo-boo',
+            'Cupcake', 'Gromit', 'Sadie', 'Angel', 'Kona', 'Tangles', 'Toffee', 'Morgan', 'Barney', 'Troy', 'Silver', 'Mini',
+            'Austin', 'Yin', 'Doodles', 'Jamie', 'Georgie', 'Woofie', 'Dodger', 'Slinky', 'Flake', 'Atlas', 'Phoenix', 'Beaux'
+        ];
+
+        // console.log(nameList.reverse());
+
+        var ats = '';
+
+        function MatchName(x) {
+            for (var i = 0; i < nameList.length; i++) {
+
+                if (nameList[i] == x) {
+                    return 'yes';
+                }
+
+            }
+            return 'no';
+        };
+
+        console.log(MatchName('Queenie'));
+
+        var NewArray = [];
+
+        for (var i = 0; i < nameList.length; i++) {
+
+            if (nameList.length > 6) {
+                NewArray.push(nameList[i])
+            }
+
+        };
+
+        console.log(NewArray);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        var TargetProductivityKof = 1;
+        //var NewSalary = 0;
+        // var companyProfit = 100000;
+
+
+        function CountPromotion(timeYouWorkedHere, productivityKof, Salary, companyProfit, n) {
+            var NewSalary = 0;
+            //Your code here..
+            if (companyProfit > 0 && productivityKof > 0 && productivityKof >= TargetProductivityKof && timeYouWorkedHere >= 1 && timeYouWorkedHere < 2) {
+                NewSalary += Salary * 1.10;
+
+            } else if (companyProfit > 0 && productivityKof > 0 && productivityKof >= TargetProductivityKof && timeYouWorkedHere >= 2 && timeYouWorkedHere < 3) {
+                NewSalary += Salary * 1.20;
+
+            } else if (companyProfit > 0 && productivityKof > 0 && productivityKof >= TargetProductivityKof && timeYouWorkedHere >= 3) {
+                NewSalary += Salary * 1.25;
+
+            } else if (companyProfit > 0 && productivityKof > 0 && productivityKof < TargetProductivityKof && timeYouWorkedHere >= 1) {
+                NewSalary += Salary * 1.05;
+
+            } else if (companyProfit > 0 && productivityKof > 0 && productivityKof < TargetProductivityKof && timeYouWorkedHere < 1) {
+                NewSalary = Salary;
+
+            } else if (companyProfit < 0) {
+                NewSalary = Salary;
+            }
+            console.log(NewSalary);
+            if (n > 0) {
+                return CountPromotion(++timeYouWorkedHere, productivityKof, NewSalary, companyProfit, --n) //funkcija save issikviecia ir paskaiciuoja i prieki pagal nurodyta N
+            }
+            return NewSalary
+        };
+
+        console.log(CountPromotion(1, 2, 1000, 100000, 2));
+
+
+        function HerbasSkaicius(x) {
+            var atsakymas = '';
+            if (x >= 0 && x <= 5) {
+                atsakymas = 'Herbas'
+            } else if (x > 5 && x <= 10) {
+                atsakymas = 'skaicius'
+            }
+            return atsakymas;
+
+        };
+
+        console.log(HerbasSkaicius(Math.floor(Math.random() * 11)));
+        console.log(Math.floor(Math.random() * 11));
+
+        //
+        // linux 8.(3)%
+
+        // MacOs 8.(3)%
+
+        // Windows 75%
+
+        // ChromeOS 8.(3)%
+
+        function OperatingSystem(x) {
+            var atsakymas = '';
+            if (x >= 0 && x <= 3) {
+                atsakymas = 'linux 8.'
+            } else if (x > 3 && x <= 6) {
+                atsakymas = 'MacOs 8.'
+            } else if (x > 6 && x <= 9) {
+                atsakymas = 'ChromeOS 8.'
+            } else if (x > 9) {
+                atsakymas = 'Windows'
+            }
+            return atsakymas;
+        };
+
+        console.log(OperatingSystem(Math.floor(Math.random() * 101)));
+        console.log(Math.floor(Math.random() * 101));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

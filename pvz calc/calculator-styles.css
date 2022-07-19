@@ -1,0 +1,292 @@
+.mainFrame {
+    height: 450px;
+    width: 330px;
+    border: solid 0.5px;
+    border-radius: 13px;
+    display: grid;
+    grid-template-rows: 25% repeat(5, 15%);
+}
+
+#answerBox {
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(92, 89, 89);
+    text-align: right;
+}
+
+#actionField {
+    font-family: Helvetica;
+    font-size: 50pt;
+    color: white;
+    margin-top: 11%;
+    margin-right: 4%;
+}
+
+.functionLine {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.functionLine>#buttonC,
+#buttonPlusMinus,
+#buttonPercentage {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(114, 110, 110);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.functionLine>#buttonC:active,
+#buttonPlusMinus:active,
+#buttonPercentage:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(80, 78, 78);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.functionLine>#buttonDivide {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: orange;
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.functionLine>#buttonDivide:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(184, 120, 3);
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers1 {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.lineOfNumbers1>#button7,
+#button8,
+#button9 {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(139, 138, 138);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers1>#button7:active,
+#button8:active,
+#button9:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(117, 117, 117);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers1>#buttonMultiply {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: orange;
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers1>#buttonMultiply:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(184, 120, 3);
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers2 {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.lineOfNumbers2>#button4,
+#button5,
+#button6 {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(139, 138, 138);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers2>#button4:active,
+#button5:active,
+#button6:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(117, 117, 117);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers2>#buttonMinus {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: orange;
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers2>#buttonMinus:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(184, 120, 3);
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers3 {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.lineOfNumbers3>#button1,
+#button2,
+#button3 {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(139, 138, 138);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers3>#button1:active,
+#button2:active,
+#button3:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(117, 117, 117);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers3>#buttonPlus {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: orange;
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers3>#buttonPlus:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(184, 120, 3);
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers4 {
+    display: grid;
+    border-radius: 10px 10px 0 0;
+    grid-template-columns: 50% repeat(2, 25%);
+}
+
+.lineOfNumbers4>#button0,
+#buttonComma {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(139, 138, 138);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers4>#button0:active,
+#buttonComma:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(117, 117, 117);
+    font-family: Helvetica;
+    font-size: 22pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers4>#button0 {
+    border-radius: 0 0 0 10px;
+}
+
+.lineOfNumbers4>#buttonEqual {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: orange;
+    border-radius: 0 0 10px 0;
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}
+
+.lineOfNumbers4>#buttonEqual:active {
+    display: grid;
+    place-items: center;
+    border: solid rgb(92, 89, 89) 1px;
+    background-color: rgb(184, 120, 3);
+    border-radius: 0 0 10px 0;
+    font-family: Helvetica;
+    font-size: 28pt;
+    color: white;
+    cursor: pointer;
+}

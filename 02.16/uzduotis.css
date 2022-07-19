@@ -1,0 +1,17 @@
+.vardas {
+    height: 50px;
+    width: 50px;
+    background-color: brown;
+}
+
+.pavarde {
+    height: 50px;
+    width: 50px;
+    background-color: aqua;
+}
+
+.sujungtas {
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+}
